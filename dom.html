@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           
+            align-content: center;
+            text-align: center;
+            background-image: url('https://ih1.redbubble.net/image.5304102086.1245/hj,1000x-pad,1000x1000,f8f8f8.jpg');      
+            background-size:cover;  
+            background-position: center;   
+        }
+        ul,p,div{
+            display: inline-block;
+            list-style-type:lower-greek;
+            color: rgb(40, 0, 150);
+            border: solid green 2px;
+            background-color: rgba(170, 255, 0, 0.408);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 50px;
+            font-size: larger;
+        }
+        h1{
+            color: rgba(255, 0, 0, 0.896);
+            background-color: rgba(83, 255, 255, 0.281);
+            text-shadow:2px 2px rgb(4, 255, 0);
+                        
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        let h1=document.createElement("h1");
+        h1.innerText='First question Output';
+        document.body.appendChild(h1);
+
+        
+
+        let ul = document.createElement("ul");
+        document.body.appendChild(ul);
+        const arr1= ["apple", "banana", "grape", "watermelon", "kiwi", "strawberry"]
+        arr1.filter( (e)=>{ if (e.length>6){
+                      let li =document.createElement("li");
+                      li.innerText=e;
+                      ul.appendChild(li); } }
+        );
+        
+
+//...........................................................
+
+        let h11=document.createElement("h1");
+        h11.innerText='Second question Output';
+        document.body.appendChild(h11);
+        
+        let arr2=["hello", "world", "javascript", "dom"];
+        let s=" ";
+       let res= arr2.map((e)=>s=s+e.toUpperCase()+"  ")
+       let p=document.createElement("p");
+       p.innerText=s;
+       document.body.appendChild(p);
+
+//---------------------------------------------------------------
+
+let h12=document.createElement("h1");
+h12.innerText='Third question Output';
+document.body.appendChild(h12);
+
+let arr3=["I", "am", "learning", "JavaScript", "today"]
+let div = document.createElement("div");
+div.innerText=arr3.join(" ");
+document.body.appendChild(div);
+
+//-------------------------------------------------------------------
+let h13=document.createElement("h1");
+h13.innerText='Fourth question Output';
+document.body.appendChild(h13);
+
+let ull=document.createElement("ul")
+
+
+let arr4= ["dog", "cat", "bird", "fish"]
+ arr4.map((e)=> {
+                          let ll=document.createElement("li");
+                          ll.innerText=e.split('').reverse().join('');
+                          ull.appendChild(ll);
+                                     });
+
+document.body.appendChild(ull);
+
+//----------------------------------------------------------------------
+let h14=document.createElement("h1");
+h14.innerText='Fifth question Output';
+document.body.appendChild(h14);
+
+let ulll=document.createElement("ul")
+
+function vowel(z){
+    let c=0
+    vowe="AEIOUaeiou";
+    for(let i of z){
+        if(vowe.includes(i)) c=c+1; 
+    }
+    return (c);
+}
+
+let arr5= ["apple", "banana", "grape"];
+arr5.map((e)=>{let x=document.createElement("li");
+                    x.innerText=e+`{ ${vowel(e)} vowels }`;
+                    ulll.appendChild(x);
+                    })
+document.body.appendChild(ulll);
+
+
+    </script>
+</body>
+</html>
